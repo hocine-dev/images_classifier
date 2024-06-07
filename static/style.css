@@ -1,65 +1,77 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f4f9;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    width: 100%;
-    background-color: #fff;
+    max-width: 600px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
 h1 {
-    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
-form {
+.form-group {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-bottom: 15px;
 }
 
-label {
-    margin-bottom: 10px;
+.upload-button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+.reset-button{
+    padding: 10px;
+    background-color: #ff144a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
     width: 100%;
-    text-align: left;
-}
-
-input[type="file"] {
+    margin-block: 5%;
     display: none;
 }
 
-.custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    cursor: pointer;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    width: 100%;
+.file-input {
+    display: none;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #333;
+    display: none;
+    margin-block: 10px;
+    font-weight: 700;
     text-align: center;
 }
 
-.custom-file-upload:hover {
-    background-color: #0056b3;
-}
-
-button {
+button[type="submit"] {
     padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
+    background-color: #28a745;
+    color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    display: block;
     width: 100%;
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+button[type="submit"]:hover {
+    background-color: #218838;
 }
