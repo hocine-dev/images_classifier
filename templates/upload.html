@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Classifier</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
     <div class="container">
         <h1>Upload Image for Classification</h1>
-        <form action="/" method="post" enctype="multipart/form-data" id="myForm">
+        <form action="/result" method="post" enctype="multipart/form-data" id="myForm">
             <div class="form-group">
                 <label for="image" id="upload-label" class="upload-button">Choose Image to Upload</label>
-                <input type="file" name="file" id="image" class="file-input" accept="image/*" onchange="showFileName()" required>
+                <input type="file" name="file" id="image" class="file-input" accept="image/*" onchange="showFileName()"
+                    required>
                 <span id="file-name" class="file-name"></span>
             </div>
-            <button type="submit">Upload</button>
+            <button id="submit" type="submit">Classify Image</button>
             <button type="reset" class="reset-button" onclick="window.location.reload()">Change image</button>
         </form>
     </div>
@@ -25,12 +28,14 @@
             var label = document.getElementById('upload-label');
             var fileNameSpan = document.getElementById('file-name');
             var fileName = input.files[0].name;
-            
+
             label.style.display = 'none';
-            fileNameSpan.textContent = 'image selected: '+fileName;
+            fileNameSpan.textContent = 'image selected: ' + fileName;
             fileNameSpan.style.display = 'block';
             document.querySelector('.reset-button').style.display = 'block';
+            document.getElementById('submit').style.display = 'block';
         }
     </script>
 </body>
+
 </html>
